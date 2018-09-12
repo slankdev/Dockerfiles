@@ -1,5 +1,5 @@
 
-FROM cumulusnetworks/frrouting:latest
+FROM ubuntu:16.04
 MAINTAINER Hiroki Shirokura <slankdev@nttv6.jp>
 
 # (base=ubuntu16:04) basic package install
@@ -21,18 +21,5 @@ RUN apt update \
  && echo "export PATH=\$PATH:/usr/lib/go-1.10/bin" >> ~/.bashrc \
  && echo "export PATH=\$PATH:\$GOPATH/bin" >> ~/.bashrc
 
-# (base=golang-1.10) openconfigd & frrd install
-RUN apt update && apt install -y automake \
- && export PATH=$PATH:/usr/lib/go-1.10/bin \
- && export GOPATH=$HOME/go \
- && go get -v github.com/coreswitch/openconfigd/openconfigd \
- && cd $GOPATH/src/github.com/coreswitch/openconfigd/openconfigd \
- && git checkout -b v0.8.1 refs/tags/v0.8.1 && go install \
- && go get -v github.com/coreswitch/openconfigd/cli_command \
- && cd $GOPATH/src/github.com/coreswitch/openconfigd/cli \
- && ./configure && make && sudo make install \
- && cd $GOPATH/src/github.com/coreswitch/openconfigd/ \
- && cp bash_completion.d/cli /etc/bash_completion.d/ \
- && go get -v github.com/slankdev/frr/frrd
 
 
