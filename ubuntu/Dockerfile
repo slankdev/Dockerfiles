@@ -22,3 +22,4 @@ RUN apt update \
  && echo "export PATH=\$PATH:\$GOPATH/bin" >> ~/.bashrc
 
 
+
