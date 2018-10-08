@@ -12,6 +12,10 @@ RUN apt update \
  && echo "  . /etc/bash_completion" >> ~/.bashrc \
  && echo "fi" >> ~/.bashrc
 
+# (base=ubuntu16:04) install tcpdump
+RUN apt update && apt -y install tcpdump \
+ && mv /usr/sbin/tcpdump /usr/bin/tcpdump
+
 # (base=ubuntu16:04) golang-1.10 install
 RUN apt update \
  && apt install -y apt-file software-properties-common \
