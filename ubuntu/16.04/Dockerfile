@@ -6,7 +6,7 @@ MAINTAINER Hiroki Shirokura <slankdev@nttv6.jp>
 RUN apt update \
  && apt install -y iputils-ping traceroute sudo \
     vim git tmux silversearcher-ag bash-completion \
-    netcat-openbsd telnet iperf tcpdump \
+    netcat-openbsd telnet iperf tcpdump openvswitch-switch \
  &&	echo "" > ~/.bashrc \
  && echo "if [ -f /etc/bash_completion ] && ! shopt -oq posix; then" >> ~/.bashrc \
  && echo "  . /etc/bash_completion" >> ~/.bashrc \
