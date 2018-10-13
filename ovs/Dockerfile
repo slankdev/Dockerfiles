@@ -1,8 +1,8 @@
 
-FROM slankdev/ubuntu:16.04
+FROM slankdev/ubuntu:18.04
 MAINTAINER Hiroki Shirokura <slankdev@nttv6.jp>
 
-# (base=slankdev/ubuntu16:04) ovs preparation
+# (base=slankdev/ubuntu18:04) ovs preparation
 CMD \
 	mkdir -p /etc/openvswitch && \
 	mkdir -p /var/run/openvswitch && \
