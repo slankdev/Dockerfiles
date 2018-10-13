@@ -40,4 +40,6 @@ RUN apt update && apt install -y automake \
  && cp bash_completion.d/cli /etc/bash_completion.d/ \
  && go get -v github.com/slankdev/frr/frrd
 
+RUN git clone git://git.kernel.org/pub/scm/network/iproute2/iproute2.git \
+ && cd iproute2 && ./configure && make && make install
 
