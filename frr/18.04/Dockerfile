@@ -1,4 +1,5 @@
 
+
 FROM slankdev/ubuntu:18.04
 MAINTAINER Hiroki Shirokura <slankdev@nttv6.jp>
 
