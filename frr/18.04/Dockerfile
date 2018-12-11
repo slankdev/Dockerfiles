@@ -11,4 +11,3 @@ RUN apt update \
  && dpkg -i /frr.deb \
  && sed -i -e 's/=no/=yes/g' /etc/frr/daemons
 
-
