@@ -15,7 +15,9 @@ ADD http://www.lttng.org/files/urcu/userspace-rcu-0.9.3.tar.bz2 userspace-rcu.ta
 RUN tar xpf userspace-rcu.tar.bz2 && cd userspace-rcu-0.9.3 \
  && ./configure && make -j`nproc` && make install -j`nproc`
 
-ENV REPO https://ghe.nttcloud.net/cutting-edge-su/kamuee
+# ENV REPO ????
+ENV REPO https://github.com/slankdev/xellico
+
 ENV COMMIT master
 WORKDIR /root/workspace
 COPY ./entrypoint.sh /
