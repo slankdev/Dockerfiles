@@ -1,5 +1,5 @@
 
-FROM dpdk
+FROM slankdev/dpdk
 MAINTAINER Hiroki Shirokura <slankdev@nttv6.jp>
 
 # move to slankdev/dpdk
