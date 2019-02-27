@@ -14,4 +14,6 @@ RUN apt update \
 
 # (Add util)
 ADD ./enable_seg6_router.py /usr/bin/enable_seg6_router.py
+ADD ./disable_seg6_router.py /usr/bin/disable_seg6_router.py
 RUN chmod +x /usr/bin/enable_seg6_router.py
+RUN chmod +x /usr/bin/disable_seg6_router.py
