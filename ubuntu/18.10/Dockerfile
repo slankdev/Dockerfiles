@@ -1,5 +1,5 @@
 
-FROM ubuntu:18.04
+FROM ubuntu:18.10
 MAINTAINER Hiroki Shirokura <slankdev@nttv6.jp>
 
 # (base=ubuntu18:04) basic package install

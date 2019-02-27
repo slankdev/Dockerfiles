@@ -12,3 +12,6 @@ RUN apt update \
  && dpkg -i /frr.deb \
  && sed -i -e 's/=no/=yes/g' /etc/frr/daemons
 
+# (Add util)
+ADD ./enable_seg6_router.py /usr/bin/enable_seg6_router.py
+RUN chmod +x /usr/bin/enable_seg6_router.py
