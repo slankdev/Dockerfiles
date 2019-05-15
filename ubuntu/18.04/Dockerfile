@@ -8,6 +8,7 @@ RUN apt update \
     vim git tmux silversearcher-ag bash-completion \
     netcat-openbsd telnet iperf tcpdump openvswitch-switch \
 		bison flex iproute2 mtr python-scapy curl pppoe pppoeconf lldpd \
+		iptables \
  &&	echo "" > ~/.bashrc \
  && echo "if [ -f /etc/bash_completion ] && ! shopt -oq posix; then" >> ~/.bashrc \
  && echo "  . /etc/bash_completion" >> ~/.bashrc \
