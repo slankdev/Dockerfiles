@@ -22,7 +22,6 @@ ADD https://ci1.netdef.org/artifact/LIBYANG-YANGRELEASE/shared/build-10/Fedora-2
 ADD https://ci1.netdef.org/artifact/LIBYANG-YANGRELEASE/shared/build-10/Fedora-29-x86_64-Packages/python3-yang-0.16.111-0.x86_64.rpm /tmp
 ADD https://ci1.netdef.org/artifact/LIBYANG-YANGRELEASE/shared/build-10/Fedora-29-x86_64-Packages/python3-yang-debuginfo-0.16.111-0.x86_64.rpm /tmp
 
-# (Add util)
 ADD ./enable_seg6_router.py /usr/bin/enable_seg6_router.py
 ADD ./disable_seg6_router.py /usr/bin/disable_seg6_router.py
 RUN chmod +x /usr/bin/enable_seg6_router.py
